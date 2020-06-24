@@ -212,5 +212,24 @@
       <p><strong>Давайте дружить, это выгодно!</strong></p>
       <p>Скидка 10% для друзей из социальных сетей.</p>
     </footer>
+
+    <section class="popup-feedback hidden">
+      <h2>Напишите нам</h2>
+
+      <button class="button-close" aria-label="Закрыть попап"></button>
+
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="feedback-name">Ваше имя:</label>
+        <input type="text" placeholder="Имя Фамилия" name="name" id="feeback-name">
+
+        <label for="feedback-email">Ваш email:</label>
+        <input type="email" placeholder="email@example.com" name="email" id="feeback-email">
+
+        <label for="feedback-message">Текст письма:</label>
+        <textarea name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
+
+        <button type="submit" class="button">Отправить</button>
+      </form>
+    </section>
   </body>
 </html>
