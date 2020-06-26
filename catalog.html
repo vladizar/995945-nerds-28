@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс. Магазин</title>
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="header">
@@ -272,7 +272,7 @@
     
           <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
     
-          <a href="#" class="button">Напишите нам</a>
+          <a href="#" class="button write-us">Напишите нам</a>
         </div>
       </div>
 
@@ -291,5 +291,34 @@
         </div>
       </div>
     </footer>
+
+    <section class="popup-feedback hidden">
+      <div class="wrapper">
+        <h2>Напишите нам</h2>
+
+        <button class="button-close" aria-label="Закрыть попап"></button>
+  
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div class="input-group">
+            <label for="feedback-name">Ваше имя:</label>
+            <input type="text" placeholder="Имя Фамилия" name="name" id="feedback-name">
+          </div>
+          
+          <div class="input-group">
+            <label for="feedback-email">Ваш email:</label>
+            <input type="email" placeholder="email@example.com" name="email" id="feedback-email">
+          </div>
+  
+          <div class="input-group">
+            <label for="feedback-message">Текст письма:</label>
+            <textarea name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
+          </div>
+  
+          <button type="submit" class="button">Отправить</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="js/script.min.js"></script>
   </body>
 </html>

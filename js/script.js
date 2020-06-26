@@ -48,34 +48,38 @@ popupFeedbackForm.onsubmit = function (evt)
     }
 }
 
-// SLIDER
-
-// Find all needed DOM elements
-const sliderControls = document.querySelectorAll('.slider-control');
-const sliderPages = document.querySelectorAll('.slider-page');
-
-// Storage for current showing page number
-let currentPage = 0;
-
-// Iterate over slider controls
-for (let i = 0; i < sliderControls.length; i++) 
+// If on index page
+if (!document.querySelector('.logo').href) 
 {
-    // When user clicks on slider control
-    sliderControls[i].onclick = function () 
+    // SLIDER
+
+    // Find all needed DOM elements
+    const sliderControls = document.querySelectorAll('.slider-control');
+    const sliderPages = document.querySelectorAll('.slider-page');
+
+    // Storage for current showing page number
+    let currentPage = 0;
+
+    // Iterate over slider controls
+    for (let i = 0; i < sliderControls.length; i++) 
     {
-        // Hide current active control activeness view
-        sliderControls[currentPage].classList.remove('active-control');
+        // When user clicks on slider control
+        sliderControls[i].onclick = function () 
+        {
+            // Hide current active control activeness view
+            sliderControls[currentPage].classList.remove('active-control');
 
-        // Hide current showing slider page
-        sliderPages[currentPage].classList.add('hidden');
+            // Hide current showing slider page
+            sliderPages[currentPage].classList.add('hidden');
 
-        // Change current showing page number
-        currentPage = i;
+            // Change current showing page number
+            currentPage = i;
 
-        // Show new active control
-        this.classList.add('active-control');
+            // Show new active control
+            this.classList.add('active-control');
 
-        // Show new slider page
-        sliderPages[currentPage].classList.remove('hidden');
+            // Show new slider page
+            sliderPages[currentPage].classList.remove('hidden');
+        }
     }
 }
