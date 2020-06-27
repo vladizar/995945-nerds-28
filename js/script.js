@@ -48,6 +48,17 @@ popupFeedbackForm.onsubmit = function (evt)
     }
 }
 
+// When user presses the key
+window.onkeydown = function (evt) 
+{
+    // If he pressed Escape
+    if (evt.key = 'Escape') 
+    {
+        // Hide popup
+        popupFeedback.classList.add('hidden');
+    }
+}
+
 // If on index page
 if (!document.querySelector('.logo').href) 
 {
