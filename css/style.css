@@ -33,9 +33,6 @@
     --special-grey-darkest: #959595;
     --special-grey-dark-light: #B4B9BB;
     --special-black-light-transaprent: rgba(0, 1, 1, 0.1);
-
-    /* FONT */
-    --roboto: "Roboto", Arial, sans-serif;
 }
 
 /* FONT */
@@ -92,7 +89,7 @@ body
     margin: 0;
     padding: 0;
     min-width: 1200px;
-    font-family: var(--roboto);
+    font-family: "Roboto", Arial, sans-serif;;
     font-size: 16px;
     line-height: 24px;
     color: var(--color-dark-blue);
@@ -405,7 +402,7 @@ a:not([href])
 /* SERVICES */
 .services
 {
-    padding: 80px 0;
+    padding: 80px 0 60px;
     padding-right: 60px;
     border-bottom: 2px solid var(--basic-grey);
 }
@@ -417,6 +414,7 @@ a:not([href])
     margin: 0;
     padding: 0;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .service
@@ -426,6 +424,7 @@ a:not([href])
     background-image: url(../img/decorative/bg-service1.png);
     background-repeat: no-repeat;
     background-position: 0 0;
+    padding-bottom: 20px;
 }
 
 .service2
@@ -580,13 +579,12 @@ a:not([href])
     top: 10px;
 }
 
-.about-us th
+.about-us td
 {
     font-weight: 700;
     font-size: 45px;
     line-height: 64px;
     color: var(--color-black);
-    text-align: left;
     border-spacing: 0;
     padding: 0;
     padding-bottom: 10px;
@@ -599,11 +597,13 @@ a:not([href])
     line-height: 40px;
 }
 
-.about-us td
+.about-us th
 {
     line-height: 18px;
     border-spacing: 0;
     padding: 0;
+    font-weight: 400;
+    text-align: left;
 }
 
 /* CLIENTS */
@@ -931,6 +931,7 @@ a:not([href])
 {
     margin-bottom: 48px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .sort .small-title
@@ -948,6 +949,7 @@ a:not([href])
     justify-content: space-between;
     margin-right: 47px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .sort-by a
@@ -1063,6 +1065,8 @@ a:not([href])
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     width: 100%;
+    max-height: calc(100% - 40px);
+    overflow-y: auto;
 }
 
 .info a
@@ -1099,6 +1103,7 @@ a[href]:active .small-title
 .pagination
 {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .pagination .button
@@ -1149,6 +1154,8 @@ li:focus-within .info
 .footer iframe
 {
     border: 0;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .footer-top
@@ -1167,6 +1174,8 @@ li:focus-within .info
     background-color: var(--color-white);
     left: 50%;
     margin-left: -580px;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 .footer-top .small-title
@@ -1206,6 +1215,7 @@ li:focus-within .info
     justify-content: space-between;
     margin-right: 140px;
     width: 260px;
+    flex-wrap: wrap;
 }
 
 .footer-bottom .button
