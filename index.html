@@ -29,7 +29,7 @@
         </div>
   
         <ol class="slider">
-          <li class="slider-page slider-page1">
+          <li class="slider-page slider-page-design">
             <h2>
               Долго, дорого,
               скрупулезно.
@@ -43,7 +43,7 @@
             <a href="#" class="button">Узнать больше</a>
           </li>
   
-          <li class="slider-page slider-page2 hidden">
+          <li class="slider-page slider-page-math hidden">
             <h2>
               Любим математику 
               как никто другой
@@ -57,7 +57,7 @@
             <a href="#" class="button">Узнать больше</a>
           </li>
   
-          <li class="slider-page slider-page3 hidden">
+          <li class="slider-page slider-page-midnight hidden">
             <h2>
               Только ночь,
               только хардкор
@@ -72,9 +72,11 @@
           </li>
         </ol>
         
-        <button class="slider-control slider-control1 active-control" aria-label="Первая страница слайдера"></button>
-        <button class="slider-control slider-control2" aria-label="Вторая страница слайдера"></button>
-        <button class="slider-control slider-control3" aria-label="Третья страница слайдера"></button>
+        <div class="slider-controls">
+          <button class="slider-control active-control" aria-label="Первая страница слайдера"></button>
+          <button class="slider-control" aria-label="Вторая страница слайдера"></button>
+          <button class="slider-control" aria-label="Третья страница слайдера"></button>
+        </div>
       </div>
     </header>
 
@@ -84,7 +86,7 @@
           <h2 class="visually-hidden">Наши услуги</h2>
   
           <ul class="services-list">
-            <li class="service service1">
+            <li class="service service-sites">
               <h3>Веб-сайты</h3>
   
               <p>
@@ -95,7 +97,7 @@
               <a href="#" class="button">Заказать</a>
             </li>
   
-            <li class="service service2">
+            <li class="service service-apps">
               <h3>Приложения</h3>
   
               <p>
@@ -106,7 +108,7 @@
               <a href="#" class="button">Заказать</a>
             </li>
   
-            <li class="service service3">
+            <li class="service service-demo">
               <h3>Презентации</h3>
   
               <p>
@@ -225,9 +227,9 @@
       <div class="wrapper">
         <div class="footer-bottom">
           <div class="left-column">
-            <a class="button" href="#"><span class="visually-hidden">VKontakte</span></a>
-            <a class="button" href="#"><span class="visually-hidden">Facebook</span></a>
-            <a class="button" href="#"><span class="visually-hidden">Instagram</span></a>
+            <a class="button vk-link" href="#"><span class="visually-hidden">VKontakte</span></a>
+            <a class="button fb-link" href="#"><span class="visually-hidden">Facebook</span></a>
+            <a class="button insta-link" href="#"><span class="visually-hidden">Instagram</span></a>
           </div>
     
           <div class="right-column">

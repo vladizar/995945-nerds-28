@@ -215,8 +215,13 @@ a:not([href])
     padding: 0;
     width: 440px;
     padding-top: 1px;
-    margin-right: 40px;
+    margin-left: -40px;
     align-items: center;
+}
+
+.site-navigation li
+{
+    margin-right: 10px;
 }
 
 .header-top .active::after
@@ -322,38 +327,45 @@ a:not([href])
     background-position: 99% 0;
 }
 
-.slider-page2
-{
-    background-image: url(../img/decorative/bg-slider2.png);
-}
-
-.slider-page2 h2,
-.slider-page3 h2
+.slider-page-math h2,
+.slider-page-midnight h2
 {
     margin-bottom: 38px;
     margin-left: 2px;
 }
 
-.slider-page3 h2
+.slider-page-midnight h2
 {
     width: 510px;
 }
 
-.slider-page2 p,
-.slider-page3 p
+.slider-page-math p,
+.slider-page-midnight p
 {
     margin-bottom: 27px;
     margin-left: 2px;
 }
 
-.slider-page3
+.slider-page-math
+{
+    background-image: url(../img/decorative/bg-slider2.png);
+}
+
+.slider-page-midnight
 {
     background-image: url(../img/decorative/bg-slider3.png);
 }
 
-.slider-control
+.slider-controls
 {
     position: absolute;
+    display: flex;
+    left: 536px;
+    bottom: 96px;
+}
+
+.slider-control
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -361,21 +373,10 @@ a:not([href])
     width: 18px;
     height: 18px;
     background-color: var(--color-white);
-    bottom: 96px;
     border: 0;
     border-radius: 50%;
-    left: 536px;
     cursor: pointer;
-}
-
-.slider-control2
-{
-    left: 571px;
-}
-
-.slider-control3
-{
-    left: 606px;
+    margin-right: 17px;
 }
 
 .active-control::after
@@ -427,12 +428,12 @@ a:not([href])
     padding-bottom: 20px;
 }
 
-.service2
+.service-apps
 {
     background-image: url(../img/decorative/bg-service2.png);
 }
 
-.service3
+.service-demo
 {
     background-image: url(../img/decorative/bg-service3.png);
 }
@@ -460,32 +461,32 @@ a:not([href])
     width: 160px;
 }
 
-.service2 .button
+.service-apps .button
 {
     background-color: var(--basic-green);
 }
 
-.service2 .button:hover
+.service-apps .button:hover
 {
     background-color: var(--special-green);
 }
 
-.service2 .button:active
+.service-sites .button:active
 {
     background-color: var(--special-green-dark);
 }
 
-.service3 .button
+.service-demo .button
 {
     background-color: var(--basic-yellow);
 }
 
-.service3 .button:hover
+.service-demo .button:hover
 {
     background-color: var(--special-yellow);
 }
 
-.service3 .button:active
+.service-demo .button:active
 {
     background-color: var(--special-yellow-dark);
 }
@@ -998,7 +999,7 @@ a:not([href])
 
 .catalog
 {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
 }
 
 .catalog ul
@@ -1011,7 +1012,7 @@ a:not([href])
     margin-bottom: 24px;
 }
 
-.catalog li
+.catalog-item
 {
     width: 360px;
     min-height: 620px;
@@ -1023,14 +1024,14 @@ a:not([href])
     margin-bottom: 30px;
 }
 
-.catalog img
+.catalog-item img
 {
     display: block;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-.catalog li::before
+.catalog-item::before
 {
     content: "";
     position: absolute;
@@ -1045,7 +1046,7 @@ a:not([href])
     border-top-left-radius: 5px;
 }
 
-.catalog li:nth-of-type(2n)
+.catalog-item:nth-of-type(2n)
 {
     margin-right: 0;
 }
@@ -1111,20 +1112,22 @@ a[href]:active .small-title
     background-color: var(--basic-grey);
     color: var(--color-black);
     display: flex;
-    width: 50px;
+    width: min-content;
+    min-width: 50px;
     min-height: 50px;
     border: 0;
     margin-right: 11px;
-    padding: 0;
+    padding: 0 17px;
     padding-top: 1px;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    margin-bottom: 10px;
 }
 
 .pagination .button:last-of-type
 {
-    width: 260px;
+    width: max-content;
+    min-width: 260px;
 }
 
 .pagination .active
@@ -1133,14 +1136,14 @@ a[href]:active .small-title
     border: 3px solid var(--special-light-grey);
 }
 
-li:hover .info,
-li:focus-within .info
+.catalog-item:hover .info,
+.catalog-item:focus-within .info
 {
     z-index: 1;
 }
 
-.catalog li:hover::before,
-.catalog li:focus-within::before
+.catalog-item:hover::before,
+.catalog-item:focus-within::before
 {
     opacity: 1;
 }
@@ -1230,12 +1233,12 @@ li:focus-within .info
     background-position: 50% 50%;
 }
 
-.footer-bottom .button:first-of-type
+.footer-bottom .vk-link
 {
     background-image: url(../img/decorative/vkontakte.svg);
 }
 
-.footer-bottom .button:last-of-type
+.footer-bottom .insta-link
 {
     background-image: url(../img/decorative/instagram.svg);
 }
